@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Pequim Variedades | Tecnologia & Assistência Técnica</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --bg:#0b0f1a;
+  --card:#111a2e;
+  --text:#ffffff;
+  --muted:#b8c1dd;
+  --brand:#ff3d3d;
+  --brand2:#2dd4bf;
+  --stroke:rgba(255,255,255,.12);
+  --radius:16px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    radial-gradient(900px 600px at 15% 10%, rgba(255,61,61,.22), transparent 55%),
+    radial-gradient(900px 600px at 85% 20%, rgba(45,212,191,.18), transparent 55%),
+    var(--bg);
+  color:var(--text);
+}
+a{text-decoration:none;color:inherit}
+.container{max-width:1100px;margin:auto;padding:18px}
+
+/* HEADER */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(17,26,46,.95);
+  border-bottom:1px solid var(--stroke);
+}
+.topbar{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.logo img{
+  width:46px;height:46px;border-radius:50%;
+  border:2px solid #fff;
+}
+nav a{margin-left:16px;color:var(--muted);font-weight:bold}
+
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:14px;
+}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}
+
+.card{
+  background:rgba(17,26,46,.9);
+  border-radius:var(--radius);
+  padding:18px;
+}
+h1{margin:0;font-size:36px}
+.subtitle{color:var(--muted);margin-top:8px;line-height:1.6}
+
+.badges{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.badge{
+  background:rgba(255,255,255,.06);
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+}
+
+/* BOTÕES */
+.btns{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.btn{
+  padding:12px 16px;
+  border-radius:12px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.btn.jack{background:var(--brand);color:#fff}
+.btn.lany{background:var(--brand2);color:#061017}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:14px;
+}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}}
+
+.tile{
+  background:rgba(255,255,255,.04);
+  border-radius:14px;
+  padding:14px;
+}
+.tile p{color:var(--muted);font-size:13px}
+.tile .action{
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(45,212,191,.15);
+  font-size:12px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.7);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+.modal-box{
+  background:#111a2e;
+  padding:20px;
+  border-radius:16px;
+  width:100%;
+  max-width:360px;
+  text-align:center;
+}
+.modal-box h3{margin-top:0}
+.modal-actions{
+  display:flex;
+  gap:12px;
+  margin-top:16px;
+}
+.modal-actions .btn{
+  flex:1;
+}
+
+/* FLOAT */
+.float{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  display:flex;
+  gap:10px;
+}
+.float a{
+  padding:12px 14px;
+  border-radius:999px;
+  font-weight:bold;
+}
+.float .jack{background:var(--brand);color:#fff}
+.float .lany{background:var(--brand2);color:#061017}
+
+footer{text-align:center;color:var(--muted);margin:30px 0;font-size:12px}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container topbar">
+    <div class="brand">
+      <div class="logo">
+        <img src="https://yt3.googleusercontent.com/1t5RwtmYXXhevOIScILT50fA4ho6QsTlAj_3BPtjb1zsBUkYvXLeCKOitiZYEDPW7qPGbmd3dw=s160-c-k-c0x00ffffff-no-rj">
+      </div>
+      <div>
+        <b>Pequim Variedades</b><br>
+        <small style="color:var(--muted)">Loja de Tecnologia • Assistência Técnica</small>
+      </div>
+    </div>
+    <nav>
+      <a href="#produtos">Produtos</a>
+      <a href="#assistencia">Assistência</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+
+<section class="hero">
+  <div class="card">
+    <h1>Tecnologia e conserto<br>no mesmo lugar</h1>
+    <p class="subtitle">
+      Celulares, computadores, TVs, Starlink e acessórios.<br>
+      Assistência técnica especializada em celular e PC.
+    </p>
+
+    <div class="badges">
+      <div class="badge">Venda e suporte</div>
+      <div class="badge">Atendimento rápido</div>
+      <div class="badge">Manutenção de PC</div>
+    </div>
+
+    <div class="btns">
+      <div class="btn jack" onclick="openChoose('Atendimento geral')">Falar no WhatsApp</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Atendimento</h3>
+    <div class="grid">
+      <div class="tile"><b>Vendas</b><p>Produtos em geral</p><span class="action" onclick="openChoose('Vendas')">Comprar</span></div>
+      <div class="tile"><b>Assistência</b><p>Celular e PC</p><span class="action" onclick="openChoose('Assistência técnica')">Consertar</span></div>
+      <div class="tile"><b>Orçamento</b><p>Rápido no WhatsApp</p><span class="action" onclick="openChoose('Orçamento')">Orçar</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="produtos">
+<h2>Produtos</h2>
+<div class="grid">
+  <div class="tile"><b>📱 Celulares</b><span class="action" onclick="openChoose('Celulares')">Consultar</span></div>
+  <div class="tile"><b>🖥️ Computadores / Notebook</b><span class="action" onclick="openChoose('Computadores')">Consultar</span></div>
+  <div class="tile"><b>📺 TVs</b><span class="action" onclick="openChoose('TVs')">Consultar</span></div>
+  <div class="tile"><b>📡 Starlink</b><span class="action" onclick="openChoose('Starlink')">Consultar</span></div>
+  <div class="tile"><b>🎧 Fones / Som</b><span class="action" onclick="openChoose('Fones e Som')">Consultar</span></div>
+  <div class="tile"><b>🔌 Acessórios</b><span class="action" onclick="openChoose('Acessórios')">Consultar</span></div>
+</div>
+</section>
+
+<section id="assistencia">
+<h2>Assistência Técnica</h2>
+<div class="grid">
+  <div class="tile"><b>📱 Celular</b><span class="action" onclick="openChoose('Conserto de celular')">Pedir orçamento</span></div>
+  <div class="tile"><b>🖥️ PC / Notebook</b><span class="action" onclick="openChoose('Conserto de PC')">Pedir orçamento</span></div>
+  <div class="tile"><b>🧾 Orçamento rápido</b><span class="action" onclick="openChoose('Orçamento rápido')">WhatsApp</span></div>
+</div>
+</section>
+
+<section id="contato">
+<h2>Contato</h2>
+<p>Instagram: @pequim.variedades</p>
+<p>WhatsApp Jack: +55 94 9221-9814</p>
+<p>WhatsApp Lany: +55 94 9300-0401</p>
+<p>Endereço: R. Magalhães Barata, 25-a – São Félix, Marabá-PA</p>
+</section>
+
+<footer>© 2026 • Pequim Variedades</footer>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <h3>Escolha o atendimento</h3>
+    <p id="modalText"></p>
+    <div class="modal-actions">
+      <div class="btn jack" onclick="sendWhats('jack')">Jack</div>
+      <div class="btn lany" onclick="sendWhats('lany')">Lany</div>
+    </div>
+    <p style="margin-top:14px;color:#aaa;cursor:pointer" onclick="closeModal()">Cancelar</p>
+  </div>
+</div>
+
+<div class="float">
+  <a class="jack" onclick="openChoose('Atendimento geral')">Jack</a>
+  <a class="lany" onclick="openChoose('Atendimento geral')">Lany</a>
+</div>
+
+<script>
+const JACK="559492219814";
+const LANY="559493000401";
+let servico="";
+
+function openChoose(s){
+  servico=s;
+  document.getElementById("modalText").innerText="Assunto: "+s;
+  document.getElementById("modal").style.display="flex";
+}
+function closeModal(){
+  document.getElementById("modal").style.display="none";
+}
+function sendWhats(w){
+  const num = w==="lany"?LANY:JACK;
+  const msg = "Olá! Vim pelo site da Pequim Variedades. Quero "+servico+".";
+  window.open("https://wa.me/"+num+"?text="+encodeURIComponent(msg),"_blank");
+  closeModal();
+}
+</script>
+
+</body>
+</html>
